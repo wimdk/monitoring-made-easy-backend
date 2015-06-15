@@ -124,3 +124,6 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 
+### Random ###
+data/
+log/
