@@ -21,5 +21,5 @@ docker run -d --name=logstash -v /Users/wimdk/workspace/monitoringMadeEasy/monit
 -> logstash-container is linked with elasticsearch. You have to use the es-alias because it is used in the Dockerfile. Port 1514 is exposed as syslog input for incoming data-stream.
 
 
-docker run -d --name=jetty -p 8888:8080 --link logstash:logstash -v /Users/wimdk/workspace/jettyWebapps:/var/lib/jetty/webapps wimdk/jetty
+docker run -d --name=jetty -p 8888:8080 --link logstash:logstash -v /Users/wimdk/workspace/jettyWebapps:/var/lib/jetty/webapps jetty
 -> The jetty-image is used to run a small webapp that puts dummy data via a  socketappender in logstash. The jetty-image used is the standard from the Docker registry. Just use docker pull jetty.
