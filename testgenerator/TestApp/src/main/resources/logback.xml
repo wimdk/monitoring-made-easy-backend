@@ -1,13 +1,14 @@
 <configuration>
 
-    <appender name="LOGSTASH"
-              class="net.logstash.logback.appender.LogstashSocketAppender">
+    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashSocketAppender">
         <syslogHost>logstash</syslogHost>>
         <port>1514</port>
         <!--<encoder class="net.logstash.logback.encoder.LogstashEncoder"/>-->
     </appender>
 
-    <root level="debug">
+    <logger name="hackathon.metrics" level="info"/>
+
+    <root level="info">
         <appender-ref ref="LOGSTASH" />
     </root>
 </configuration>

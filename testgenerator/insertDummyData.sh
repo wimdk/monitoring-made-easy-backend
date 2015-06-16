@@ -12,6 +12,6 @@ do
 	echo "Press [CTRL+C] to stop.."
 	sleep $[ ( $RANDOM % 10 )  + 1 ]s
 	RANDOMWORD=`curl http://randomword.setgetgo.com/get.php`
-	wget -qO- http://$1:8888/MetricsDropwizardSpike/dummyservice/echo/$RANDOMWORD\r\n
+	wget -qO- http://$1:8888/MetricsDropwizardSpike/dummyservice/echo/$RANDOMWORD
 	echo "sending $RANDOMWORD"
 done
